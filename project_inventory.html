@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCADSP Inventory Management System | Rigolo Bauge Robin</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tailwind-config.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-surface-tint selection:text-surface-container-lowest">
+
+  <header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant">
+    <nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16">
+      <span class="font-display-lg text-headline-md tracking-tighter text-on-surface">RIGOLO BAUGE ROBIN</span>
+      <div class="hidden md:flex gap-stack-lg items-center">
+        <a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="index.html">Portfolio</a>
+        <a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="cv.html">CV</a>
+        <a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-label-md text-label-md" href="index.html#projects">Projects</a>
+        <a class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 rounded-lg font-bold hover:opacity-90 transition-all flex items-center gap-2 text-sm" href="resources/ncadsp_project_summary.pdf" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">download</span> Project Detail
+        </a>
+      </div>
+      <button class="md:hidden text-surface-tint">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- Hero -->
+    <section class="relative min-h-[420px] flex items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden" id="hero">
+      <div class="relative z-10 w-full py-section-gap">
+        <div class="flex flex-wrap gap-2 mb-stack-sm">
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Python</span>
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Django</span>
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">PostgreSQL</span>
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">HTMX</span>
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Tailwind CSS</span>
+          <span class="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Docker</span>
+        </div>
+        <span class="font-label-md text-surface-tint mb-stack-sm block tracking-widest uppercase">Enterprise Asset Management</span>
+        <h1 class="font-display-lg text-display-lg mb-stack-md text-on-surface max-w-4xl">
+          NCADSP <span class="text-surface-tint" style="text-shadow: rgb(168, 85, 247) 0px 0px 10px, rgb(168, 85, 247) 0px 0px 20px;">Inventory Management</span> System
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          A comprehensive, enterprise-grade asset and inventory tracking solution engineered to manage the complete lifecycle of physical assets — from procurement through depreciation, maintenance scheduling, to full tendering and disposal.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Screenshot Slider -->
+    <section class="pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-md border-l-4 border-surface-tint pl-4 flex items-center gap-2"><span class="material-symbols-outlined">photo_library</span> Project Image Slides</h2>
+      <div class="relative w-full rounded-xl overflow-hidden border border-outline-variant shadow-2xl bg-surface-container-lowest p-2">
+        
+        <!-- Main Images -->
+        <div class="relative w-full aspect-video bg-surface-container-high rounded-t-lg overflow-hidden">
+          <!-- Slide 1 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">1 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide1_login.png" class="w-full h-full object-contain" alt="Login Dashboard">
+          </div>
+          <!-- Slide 2 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">2 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide2_landing.png" class="w-full h-full object-contain" alt="Landing Page">
+          </div>
+          <!-- Slide 3 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">3 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide3_cfar_home.png" class="w-full h-full object-contain" alt="CFAR Home">
+          </div>
+          <!-- Slide 4 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">4 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide4_ncadsp_add_items.png" class="w-full h-full object-contain" alt="Add Inventory Items">
+          </div>
+          <!-- Slide 5 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">5 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide5_ncadsp_item_list.png" class="w-full h-full object-contain" alt="Item List View">
+          </div>
+          <!-- Slide 6 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">6 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide_6_ncadsp_item_detail.png" class="w-full h-full object-contain" alt="Item Detail View">
+          </div>
+          <!-- Slide 7 -->
+          <div class="inventory-slides hidden h-full w-full">
+            <div class="absolute top-0 left-0 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1 rounded-br-lg text-xs font-medium border-b border-r border-outline-variant text-on-surface shadow z-10">7 / 7</div>
+            <img src="img/project_img_slides/fixed_assets_registry/slide7_IMPORT_EXCEL_DATA.png" class="w-full h-full object-contain" alt="Import Excel Data">
+          </div>
+
+          <!-- Navigation Buttons -->
+          <a class="cursor-pointer absolute top-1/2 left-0 -translate-y-1/2 w-auto p-4 text-white font-bold text-xl bg-black/20 hover:bg-black/80 rounded-r-md transition-colors select-none z-10" onclick="plusInventorySlides(-1)">❮</a>
+          <a class="cursor-pointer absolute top-1/2 right-0 -translate-y-1/2 w-auto p-4 text-white font-bold text-xl bg-black/20 hover:bg-black/80 rounded-l-md transition-colors select-none z-10" onclick="plusInventorySlides(1)">❯</a>
+        </div>
+
+        <!-- Caption Container -->
+        <div class="text-center bg-surface-container-high py-3 text-on-surface font-label-md border-y border-outline-variant">
+          <p id="inventory-caption" class="min-h-[1.5rem] m-0 font-semibold tracking-wide"></p>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="grid grid-cols-7 gap-1 mt-1 bg-surface-container-lowest">
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide1_login.png" onclick="currentInventorySlide(1)" alt="Login Dashboard">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide2_landing.png" onclick="currentInventorySlide(2)" alt="Landing Page">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide3_cfar_home.png" onclick="currentInventorySlide(3)" alt="CFAR Home">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide4_ncadsp_add_items.png" onclick="currentInventorySlide(4)" alt="Add Inventory Items">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide5_ncadsp_item_list.png" onclick="currentInventorySlide(5)" alt="Item List View">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide_6_ncadsp_item_detail.png" onclick="currentInventorySlide(6)" alt="Item Detail View">
+          </div>
+          <div class="aspect-video relative">
+            <img class="inventory-demo cursor-pointer opacity-50 hover:opacity-100 transition-opacity w-full h-full object-cover rounded-sm" src="img/project_img_slides/fixed_assets_registry/slide7_IMPORT_EXCEL_DATA.png" onclick="currentInventorySlide(7)" alt="Import Excel Data">
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let inventorySlideIndex = 1;
+        showInventorySlides(inventorySlideIndex);
+
+        function plusInventorySlides(n) {
+          showInventorySlides(inventorySlideIndex += n);
+        }
+
+        function currentInventorySlide(n) {
+          showInventorySlides(inventorySlideIndex = n);
+        }
+
+        function showInventorySlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("inventory-slides");
+          let dots = document.getElementsByClassName("inventory-demo");
+          let captionText = document.getElementById("inventory-caption");
+          if (!slides.length) return;
+          if (n > slides.length) {inventorySlideIndex = 1}
+          if (n < 1) {inventorySlideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("opacity-100");
+            dots[i].classList.add("opacity-50");
+          }
+          slides[inventorySlideIndex-1].style.display = "block";
+          dots[inventorySlideIndex-1].classList.remove("opacity-50");
+          dots[inventorySlideIndex-1].classList.add("opacity-100");
+          captionText.innerHTML = dots[inventorySlideIndex-1].alt;
+        }
+      </script>
+    </section>
+
+    <!-- Video Demo -->
+    <section class="pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-md border-l-4 border-surface-tint pl-4 flex items-center gap-2"><span class="material-symbols-outlined">smart_display</span> Project Video</h2>
+      <div class="rounded-xl overflow-hidden border border-outline-variant shadow-2xl bg-surface-container-lowest p-2">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full rounded-lg border border-outline-variant" src="https://www.youtube.com/embed/49ge8uPcbqc" title="NCADSP Inventory Management System Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+        <div class="md:col-span-4">
+          <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-sm border-l-4 border-surface-tint pl-4">Executive Summary</h2>
+        </div>
+        <div class="md:col-span-8 space-y-4 font-body-lg text-on-surface-variant">
+          <p>The NCADSP Inventory Management System is a comprehensive, enterprise-grade asset and inventory tracking solution engineered to manage the complete lifecycle of physical assets. Developed with a robust Python/Django backend and a modern HTMX/Tailwind CSS frontend, the system orchestrates complex workflows including procurement, depreciation tracking, maintenance scheduling, and a full-fledged tendering process. It stands out for its meticulous data modeling, automated operational logic, and highly optimized database architecture.</p>
+          <p>Built to handle complex organizational needs, the software features dynamic QR code generation, advanced hierarchical category mapping, automated financial depreciation calculations, and comprehensive tendering lifecycle management. The application employs a modern, lightweight frontend architecture using HTMX and Tailwind CSS, backed by a powerful Django and PostgreSQL foundation, resulting in a highly performant, scalable, and maintainable platform.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="py-section-gap bg-surface-container-lowest px-margin-mobile md:px-gutter">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Technical Architecture</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+          <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl transition-all">
+            <div class="flex items-center gap-3 mb-stack-md">
+              <span class="material-symbols-outlined text-surface-tint">settings</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface">Core Module</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant">Manages global configuration, settings, landing pages, and foundational routing. Provides the base infrastructure for all other applications in the system.</p>
+          </div>
+          <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl transition-all">
+            <div class="flex items-center gap-3 mb-stack-md">
+              <span class="material-symbols-outlined text-surface-tint">manage_accounts</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface">Accounts Module</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant">Implements a robust, custom Role-Based Access Control (RBAC) system extending Django's abstract user. Supports specialized roles (Admin, HOD, Staff, Guest, Subscriber) and integrates django-allauth for email and social authentication.</p>
+          </div>
+          <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl transition-all">
+            <div class="flex items-center gap-3 mb-stack-md">
+              <span class="material-symbols-outlined text-surface-tint">inventory_2</span>
+              <h3 class="font-headline-md text-headline-md text-on-surface">Inventory Module</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant">The complex domain core encapsulating rich domain models with custom business logic for asset tracking, transaction histories, maintenance cadence scheduling, and an end-to-end tender bidding state machine.</p>
+          </div>
+        </div>
+
+        <div class="mt-stack-lg bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Design Patterns &amp; Principles</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-on-surface-variant font-body-md">
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Fat Models, Skinny Views</strong> — Business logic deeply encapsulated within models</li>
+              <li><strong>Mixin Pattern</strong> — Reusable mixins (e.g., QRGeneratorMixin) keep models DRY</li>
+            </ul>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Asynchronous Processing</strong> — Prepared for Celery distributed task queues and Django Channels real-time capabilities</li>
+              <li><strong>Progressive Enhancement</strong> — HTMX for dynamic SPA-like interactions without heavy JavaScript frameworks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Technology Stack</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-surface-container border border-outline-variant p-4 rounded-xl">
+          <p class="font-label-md text-label-md text-surface-tint mb-2 uppercase">Backend</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Python 3.12</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Django 5.2</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">DRF</span>
+          </div>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-4 rounded-xl">
+          <p class="font-label-md text-label-md text-surface-tint mb-2 uppercase">Database</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">PostgreSQL</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">SQLite</span>
+          </div>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-4 rounded-xl">
+          <p class="font-label-md text-label-md text-surface-tint mb-2 uppercase">Frontend</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Tailwind CSS</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">HTMX</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">crispy-forms</span>
+          </div>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-4 rounded-xl">
+          <p class="font-label-md text-label-md text-surface-tint mb-2 uppercase">DevOps</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Docker</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Celery/Redis</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-stack-md bg-surface-container border border-outline-variant p-4 rounded-xl">
+        <p class="font-label-md text-label-md text-surface-tint mb-2 uppercase">Utilities &amp; Libraries</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Pandas</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">OpenPyXL</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">ReportLab</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">WeasyPrint</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Pillow</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">QRCode</span>
+          <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">django-allauth</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-section-gap bg-surface-container-lowest">
+      <div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Key Features</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">track_changes</span>
+            <span class="font-body-md text-on-surface">End-to-End Asset Lifecycle Management</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">gavel</span>
+            <span class="font-body-md text-on-surface">Intelligent Tendering State Machine</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">calendar_month</span>
+            <span class="font-body-md text-on-surface">Automated Maintenance Scheduling</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">image</span>
+            <span class="font-body-md text-on-surface">Dynamic Media Processing Pipeline</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">qr_code_scanner</span>
+            <span class="font-body-md text-on-surface">Automated QR Code Generation</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">category</span>
+            <span class="font-body-md text-on-surface">Self-Balancing Hierarchical Categorization</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">lock</span>
+            <span class="font-body-md text-on-surface">Granular Role-Based Access Control</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">receipt_long</span>
+            <span class="font-body-md text-on-surface">Depreciation &amp; Financial Tracking</span>
+          </div>
+          <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center">
+            <span class="material-symbols-outlined text-surface-tint">history</span>
+            <span class="font-body-md text-on-surface">Stateful Transaction History &amp; Audit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Challenges -->
+    <section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Engineering Challenges Solved</h2>
+      <div class="space-y-4">
+        <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Complex Data Integrity</h3>
+          <p class="font-body-md text-on-surface-variant">Addressed through rigorous use of database-level constraints (CheckConstraint for birthdates, UniqueConstraint for user/category scoping) and comprehensive indexing strategies to maintain query performance at scale.</p>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Intelligent Code Generation Algorithm</h3>
+          <p class="font-body-md text-on-surface-variant">Solved the challenge of human-readable yet unique identifier generation for categories by implementing a multi-strategy algorithm that evaluates parent codes, strips common words, extracts consonants, and handles collision resolution automatically.</p>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Standardized Image Processing</h3>
+          <p class="font-body-md text-on-surface-variant">Engineered a custom Pillow-based processing pipeline that mathematically scales, crops, and centers arbitrary images onto a perfectly proportioned white canvas, ensuring UI uniformity across the platform.</p>
+        </div>
+        <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Stateful Transaction Tracking</h3>
+          <p class="font-body-md text-on-surface-variant">Implemented a comprehensive InventoryHistory and InventoryTransaction system that accurately logs stock movements and maintains historical auditing capabilities without compromising write speeds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovation & Creativity -->
+    <section class="py-section-gap bg-surface-container px-margin-mobile md:px-gutter">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Innovation &amp; Technical Creativity</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+          <div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint text-3xl mb-stack-sm">barcode</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Algorithmic SKU Generation</h3>
+            <p class="font-body-md text-on-surface-variant">The Category model features a highly creative generate_optimal_code method that uses lexical analysis to generate meaningful, hierarchical acronyms — extracting consonants from multi-word strings while ignoring stop words.</p>
+          </div>
+          <div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint text-3xl mb-stack-sm">devices</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Headless-Ready with HTMX</h3>
+            <p class="font-body-md text-on-surface-variant">By leveraging HTMX, achieved SPA-like responsiveness and dynamic UI updates while retaining the SEO benefits, simplicity, and security of server-rendered Django templates.</p>
+          </div>
+          <div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint text-3xl mb-stack-sm">widgets</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Modular Mixin Design</h3>
+            <p class="font-body-md text-on-surface-variant">The QRGeneratorMixin demonstrates excellent architectural foresight, abstracting complex byte-buffer and image generation logic into a reusable class attached to any model requiring physical tagging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Value -->
+    <section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+      <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl text-center">
+        <span class="material-symbols-outlined text-surface-tint text-4xl mb-stack-sm">business_center</span>
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-sm">Business Value &amp; Organizational Impact</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md mt-stack-md text-left">
+          <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint">trending_down</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mt-2">Reduced Operational Overhead</h3>
+            <p class="font-body-md text-on-surface-variant">Automating maintenance cadences and QR code generation eliminates manual tracking errors and administrative bloat.</p>
+          </div>
+          <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint">account_balance</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mt-2">Financial Accountability</h3>
+            <p class="font-body-md text-on-surface-variant">Built-in depreciation logic and tender management directly protect the organization's bottom line by maximizing asset lifespan and optimizing disposal returns.</p>
+          </div>
+          <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+            <span class="material-symbols-outlined text-surface-tint">insights</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface mt-2">Data-Driven Decisions</h3>
+            <p class="font-body-md text-on-surface-variant">Normalized data structures and aggregated views ensure management can instantly generate accurate reports on asset allocation and expenditure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Version -->
+    <section class="py-section-gap bg-surface-container-lowest px-margin-mobile md:px-gutter">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-4">Resume Summary</h2>
+        <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+          <p class="font-body-lg text-body-lg text-on-surface-variant font-bold mb-stack-md">Lead Developer, NCADSP Enterprise Inventory Management System</p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md">Architected and developed a full-stack enterprise asset and inventory management platform from the ground up using Python, Django, PostgreSQL, HTMX, and Tailwind CSS. Designed a highly normalized relational database to manage complex workflows including procurement, recurring maintenance scheduling, and an end-to-end tendering state machine.</p>
+          <ul class="list-disc pl-5 space-y-2 font-body-lg text-on-surface-variant">
+            <li>Engineered intelligent domain models utilizing advanced Django ORM features (Indexes, CheckConstraints) to ensure rigorous data integrity and performance at scale.</li>
+            <li>Developed custom algorithmic solutions, including a lexical parsing engine for automated, collision-free SKU generation and a dynamic Pillow-based image processing pipeline for standardized asset media.</li>
+            <li>Implemented a custom Role-Based Access Control (RBAC) system with automated QR code provisioning via modular Mixins.</li>
+            <li>Streamlined the frontend architecture by leveraging HTMX for SPA-like reactivity without the overhead of heavy JavaScript frameworks, significantly improving maintainability and load times.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-surface-container-lowest border-t border-outline-variant py-stack-lg">
+    <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-stack-md">
+      <div class="flex flex-col items-center md:items-start">
+        <span class="font-code-sm text-code-sm text-on-surface-variant">&copy; 2026 RIGOLO BAUGE ROBIN | Systems Architect</span>
+        <p class="text-surface-tint font-label-md mt-2 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">phone</span> (675) 81233406 / 70968601
+          <span class="mx-2">|</span>
+          <span class="material-symbols-outlined text-[18px]">mail</span> rigobauge@gmail.com
+        </p>
+      </div>
+      <div class="flex gap-stack-lg">
+        <a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">LinkedIn</a>
+        <a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">GitHub</a>
+        <a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">Twitter</a>
+        <a class="text-surface-tint font-bold font-label-md text-label-md underline decoration-surface-tint" href="mailto:rigobauge@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </footer>
+
+  <canvas class="fixed inset-0 pointer-events-none z-[1] opacity-30" id="particleCanvas"></canvas>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RIGOLO BAUGE ROBIN | Systems Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/tailwind-config.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-surface-tint selection:text-surface-container-lowest">
+<!-- Navigation Shell -->
+<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant">
+<nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16">
+<span class="font-display-lg text-headline-md tracking-tighter text-on-surface">RIGOLO BAUGE ROBIN</span>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-label-md text-label-md" href="#hero">Hero</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#artwork">Artwork</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#education">Education</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors duration-200 font-label-md text-label-md" href="#contact">Contact</a>
+<a href="#contact" class="bg-surface-tint text-surface-container-lowest px-stack-md py-2 rounded font-label-md text-label-md hover:opacity-90 transition-opacity">Resume</a>
+<a href="cv.html" class="border border-surface-tint text-surface-tint px-stack-md py-2 rounded font-label-md text-label-md hover:bg-surface-tint/10 transition-colors" target="_blank">View CV</a>
+</div>
+<button class="md:hidden text-surface-tint">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Side Nav (Desktop Anchor) -->
+<aside class="fixed left-0 top-0 h-screen hidden lg:flex flex-col w-64 bg-surface-container-low border-r border-outline-variant z-40 pt-24 px-stack-md">
+<div class="flex flex-col items-center mb-stack-lg border-b border-outline-variant pb-stack-lg">
+<div class="w-20 h-20 bg-surface-variant rounded-full mb-stack-sm overflow-hidden border-2 border-surface-tint">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of Rigolo Bauge Robin, a Systems Architect with a determined and experienced expression. He is set against a dark, tech-oriented backdrop with subtle cyan accent lighting. The overall mood is high-tech, professional, and reliable, reflecting a master of technical systems and software engineering." src="resources/rigzx7.png">
+</div>
+<h3 class="font-headline-md text-body-md text-surface-tint text-center">Systems Architect</h3>
+<p class="font-label-md text-code-sm text-on-surface-variant text-center">Technical Minimalism</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="bg-surface-variant text-surface-tint border-l-4 border-surface-tint px-4 py-3 flex items-center gap-3" href="#hero">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-body-md text-body-md">Hero</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#about">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md text-body-md">About</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#skills">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-body-md text-body-md">Skills</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#artwork">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-body-md text-body-md">Artwork</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#experience">
+<span class="material-symbols-outlined">history</span>
+<span class="font-body-md text-body-md">Experience</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#education">
+<span class="material-symbols-outlined">school</span>
+<span class="font-body-md text-body-md">Education</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#projects">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-body-md text-body-md">Projects</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-all flex items-center gap-3" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-md text-body-md">Contact</span>
+</a>
+</div>
+</aside>
+<main class="lg:ml-64 pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden" id="hero">
+<div class="relative z-10 w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-section-gap">
+<div class="md:col-span-8">
+<span class="font-label-md text-surface-tint mb-stack-sm block tracking-widest uppercase">Systems Architect &amp; Software Engineer</span>
+<h1 class="font-display-lg text-display-lg mb-stack-md text-on-surface max-w-3xl">
+                        Architecting <span class="text-surface-tint underline decoration-outline-variant" style="text-shadow: rgb(168, 85, 247) 0px 0px 10px, rgb(168, 85, 247) 0px 0px 20px;">Elegance</span> out of Complexity.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                        Obsessed with a rare passion for ICT since 2002. From facilitating corporate training for organizations like PNG Power to developing sophisticated database systems, my journey is a 20-year obsession with command-line logic and architectural integrity.
+                    </p>
+<div class="flex flex-wrap gap-stack-md">
+<a href="#projects" class="bg-surface-tint text-surface-container-lowest px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:scale-[0.98] transition-transform inline-block">Explore Work</a>
+<a href="#contact" class="border border-surface-tint text-surface-tint px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:bg-surface-tint/10 transition-colors inline-block">Contact Me</a>
+</div>
+</div>
+<div class="md:col-span-4 hidden md:block">
+<div class="aspect-square bg-surface-container border border-outline-variant p-2 relative">
+<div class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-surface-tint"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast professional portrait of Rigolo Bauge Robin, focusing on his face with sharp lighting. The background is a dimly lit server room with glowing blue and green network cables, creating a technical and authoritative environment. He looks directly at the camera with the confidence of a 20-year veteran in Systems Architecture." src="resources/rigzx7.png">
+<div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-surface-tint"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+<div class="md:col-span-4">
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-sm border-l-4 border-surface-tint pl-4">Professional Profile</h2>
+</div>
+<div class="md:col-span-8 space-y-4 font-body-lg text-on-surface-variant">
+<p>Highly versatile and results-driven Software Engineer, Systems Architect, Full Stack Developer, Database Specialist, Corporate Trainer, and Digital Solutions Consultant with over 20 years of progressive experience spanning software engineering, database development, information systems architecture, ICT education, business process automation, digital transformation, graphics design, and enterprise reporting systems.</p>
+<p>Possesses extensive hands-on expertise in designing and developing robust web-based applications, management information systems, database-driven dashboards, data analytics solutions, SaaS platforms, e-learning systems, and business automation tools. Proven track record of delivering innovative technology solutions across government agencies, educational institutions, private sector organizations, SMEs, and community development initiatives throughout Papua New Guinea.</p>
+<p>Recognized for combining technical expertise, strategic thinking, training excellence, and innovative problem-solving capabilities to transform complex business requirements into scalable technology solutions.</p>
+</div>
+</div>
+</section>
+
+<!-- Skills & Expertise -->
+<section class="py-section-gap bg-surface-container-lowest" id="skills">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-stack-lg">
+<div>
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-sm border-l-4 border-surface-tint pl-4">Technical &amp; Core Competencies</h2>
+<p class="font-body-md text-on-surface-variant">A multi-disciplinary arsenal developed over two decades.</p>
+</div>
+<div class="font-code-sm text-surface-tint mt-stack-md md:mt-0 px-4 py-2 bg-surface-container rounded border border-outline-variant">
+                    &lt;skills_count="48+" /&gt;
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+    <!-- Languages & Frameworks -->
+    <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl border-glow transition-all" style="box-shadow: rgba(168, 85, 247, 0.2) 0px 0px 15px; border-color: rgba(168, 85, 247, 0.4);">
+        <div class="flex items-center gap-3 mb-stack-md">
+            <span class="material-symbols-outlined text-surface-tint">code</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface">Languages &amp; Frameworks</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Python</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">JavaScript</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">HTML5/CSS3</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Java</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">PHP</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">VBA</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">SQL</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Django</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">React</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Node.js</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Bootstrap/jQuery</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">PyScript</span>
+        </div>
+    </div>
+    <!-- Data Systems -->
+    <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl transition-all">
+        <div class="flex items-center gap-3 mb-stack-md">
+            <span class="material-symbols-outlined text-secondary-container">database</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface">Data Systems &amp; Analytics</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">PostgreSQL</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">MySQL</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">MongoDB</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">SQLite</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">MS Access</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">Excel Advanced Analytics</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">Dashboard Dev</span>
+            <span class="px-2 py-1 bg-secondary-container/10 text-secondary-container font-code-sm rounded border border-secondary-container/20">Data Vis</span>
+        </div>
+    </div>
+    <!-- Platforms & Creative -->
+    <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl transition-all">
+        <div class="flex items-center gap-3 mb-stack-md">
+            <span class="material-symbols-outlined text-surface-tint">brush</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface">Platforms &amp; Creative</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Moodle LMS / H5P</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">WordPress</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Adobe CC (Ill, PS, Pr)</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Cinema 4D / AutoCAD</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">UI/UX Design</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">Cloud Deployment</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">API Integration</span>
+            <span class="px-2 py-1 bg-surface-tint/10 text-surface-tint font-code-sm rounded border border-surface-tint/20">JSON Data Structures</span>
+        </div>
+    </div>
+</div>
+
+<div class="mt-stack-lg bg-surface-container-high border border-outline-variant p-stack-lg rounded-xl">
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Core Professional Competencies</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-on-surface-variant font-label-md">
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Software Engineering</li>
+            <li>Systems Architecture &amp; Design</li>
+            <li>Full Stack Web Development</li>
+            <li>Enterprise Database Dev</li>
+            <li>AI Prompt Engineering</li>
+        </ul>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Data Analytics &amp; Dashboards</li>
+            <li>Business Process Automation</li>
+            <li>SaaS Solutions</li>
+            <li>Digital Transformation</li>
+            <li>Strategic Problem Solving</li>
+        </ul>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Corporate Training</li>
+            <li>Curriculum Development</li>
+            <li>E-Learning Systems</li>
+            <li>Project Management</li>
+            <li>Technical Leadership</li>
+        </ul>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Technical Consulting</li>
+            <li>Proposal Writing</li>
+            <li>Digital Graphics &amp; Multimedia</li>
+            <li>Business Development</li>
+            <li>Digital Innovation</li>
+        </ul>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Graphics Design Artwork Carousel -->
+<section class="py-section-gap bg-background" id="artwork">
+  <div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-stack-md">
+    <div class="flex flex-col md:flex-row md:items-end justify-between">
+      <div>
+        <h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-sm border-l-4 border-surface-tint pl-4">MY GRAPHICS DESIGN ARTWORK</h2>
+        <p class="font-body-md text-on-surface-variant max-w-2xl">A showcase of selected branding, UI/UX, vector illustration, poster, and digital artwork.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-container" role="region" aria-label="Graphics design artwork carousel">
+    <div class="carousel-track" role="list" id="artworkTrack"></div>
+  </div>
+</section>
+
+<!-- Professional Journey -->
+<section class="py-section-gap bg-surface-container px-margin-mobile md:px-gutter" id="experience">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-6">Professional Experience</h2>
+<div class="relative border-l border-outline-variant ml-4 md:ml-0 md:pl-0">
+
+<!-- Experience Items -->
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-surface-tint">2022 - Present</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-surface-tint shadow-[0_0_8px_#00dbe7] md:left-[calc(16.666%-5px)]" style="background: linear-gradient(rgb(168, 85, 247), rgb(0, 219, 231));"></div>
+<div class="md:col-span-10 bg-surface-container-low p-6 rounded-xl border border-outline-variant">
+<h4 class="font-headline-md text-headline-md text-on-surface">Systems Architect &amp; Software Engineer</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-surface-tint">Coffee Industry Corporation (CIC) / National Coffee Authority (NCA)</p>
+<ul class="font-body-md text-on-surface-variant list-disc pl-5 space-y-2">
+<li>Design and develop enterprise information systems and architect database-driven reporting platforms.</li>
+<li>Develop automation solutions for organizational workflows and build analytical dashboards.</li>
+<li>Support strategic ICT modernization initiatives.</li>
+<li><strong>Major Achievement:</strong> CEDARS – Designed and developed comprehensive reporting platform automating export data analysis and reporting. Improved accessibility and efficiency of export intelligence.</li>
+</ul>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-surface-tint">2022 - Present</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-surface-tint shadow-[0_0_8px_#00dbe7] md:left-[calc(16.666%-5px)]" style="background: linear-gradient(rgb(168, 85, 247), rgb(0, 219, 231));"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Managing Director &amp; Systems Consultant</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">My e-Solutionz</p>
+<p class="font-body-md text-on-surface-variant">Leading software development projects, delivering ICT consulting, developing custom databases, and providing systems integration and business automation services.</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2021</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">IT Specialist | Graphics Artist | System Developer</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">Kokopo Technical Secondary School</p>
+<p class="font-body-md text-on-surface-variant">ICT support, infrastructure management, systems development, administration, graphic design, and educational technology support.</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2020 - 2021</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Instructor – Web Development &amp; Programming</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">Mega Institute of Technology</p>
+<p class="font-body-md text-on-surface-variant">Delivered training in HTML, CSS, JavaScript, and introductory programming. Developed course modules and led institutional database development projects.</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2018 - 2019</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Graphic Designer &amp; IT Support Specialist</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">H3 International PNG Ltd</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2018</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Lecturer / Trainer</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">PNG NetComp &amp; IT Job Training Centre</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2017</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Database Developer / Sales / Teacher</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">Hertz Rental Cars / International Training Institute / Kimbe Grammar Secondary School</p>
+<p class="font-body-md text-on-surface-variant">Database development, sales &amp; marketing, and taught Advanced Mathematics, Science, Accounting, and Business Studies.</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2014 - 2016</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Branch Manager / Principal / Corporate Trainer</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">IT Job Training Centre (Kimbe &amp; Port Moresby)</p>
+</div>
+</div>
+
+<div class="mb-stack-lg relative pl-8 md:grid md:grid-cols-12 md:pl-0 md:gap-gutter">
+<div class="hidden md:flex md:col-span-2 justify-end text-right pr-gutter">
+<span class="font-label-md text-on-surface-variant">2010 - 2012</span>
+</div>
+<div class="absolute left-[-5px] top-0 w-[10px] h-[10px] rounded-full bg-outline-variant md:left-[calc(16.666%-5px)]"></div>
+<div class="md:col-span-10">
+<h4 class="font-headline-md text-headline-md text-on-surface">Business Development &amp; Finance Admin Manager</h4>
+<p class="font-label-md text-secondary mb-stack-sm text-on-surface-variant">Eastern Highlands Produce Cooperative Society &amp; Noikopa Security Services</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Education & Certifications -->
+<section class="py-section-gap bg-surface-container-lowest" id="education">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg border-l-4 border-surface-tint pl-6">Education &amp; Certifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+    <!-- Education -->
+    <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2"><span class="material-symbols-outlined text-surface-tint">school</span> Academic Background</h3>
+        <div class="space-y-6">
+            <div>
+                <h4 class="font-body-lg font-bold text-on-surface">Diploma in Tropical Agriculture</h4>
+                <p class="font-body-md text-on-surface-variant">PNG University of Natural Resources &amp; Environment (PNGUNRE) | 2002 – 2004</p>
+                <div class="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-surface-tint/10 text-surface-tint font-label-md rounded border border-surface-tint/20">
+                    <span class="material-symbols-outlined text-[16px]">military_tech</span> Top Performance in Advanced Computing &amp; IT
+                </div>
+            </div>
+            <div>
+                <h4 class="font-body-lg font-bold text-on-surface">Higher School Certificate (Grade 12)</h4>
+                <p class="font-body-md text-on-surface-variant">Aiyura National High School</p>
+            </div>
+        </div>
+    </div>
+    <!-- Certifications -->
+    <div class="bg-surface-container border border-outline-variant p-stack-lg rounded-xl">
+        <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2"><span class="material-symbols-outlined text-surface-tint">verified</span> Professional Certifications</h3>
+        <div class="space-y-6">
+            <div>
+                <h4 class="font-body-lg font-bold text-on-surface">Train the Trainer Certification</h4>
+                <p class="font-body-md text-on-surface-variant">National Training Council (NTC) / IBBM</p>
+                <p class="font-label-md text-surface-tint mt-1 italic">Focus: Course Module &amp; Competency-Based Training Development</p>
+            </div>
+            <div>
+                <h4 class="font-body-lg font-bold text-on-surface">Advanced Diploma in Information Technology</h4>
+                <p class="font-body-md text-on-surface-variant">Industry-Based Professional Certification | IT Job Training Centre</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Featured Projects -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="projects">
+<div class="text-center mb-stack-lg">
+<h2 class="font-display-lg text-display-lg text-on-surface">Software Projects</h2>
+<p class="font-body-lg text-on-surface-variant mt-stack-sm">Proof of concepts and large-scale industrial systems.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Dynamic Flagship -->
+<div id="dynamic-flagship" class="lg:col-span-2 relative overflow-hidden bg-surface-container rounded-xl border border-surface-tint transition-all" style="box-shadow: rgba(168, 85, 247, 0.15) 0px 0px 20px;">
+<div class="aspect-video w-full bg-surface-variant overflow-hidden relative">
+<img id="flagship-img" class="w-full h-full object-cover transition-transform duration-500" alt="CEDARS dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_1He1EkD34Zwh2phGmnMcuP0nLhW2rhpEvqTYoboXXRFw_t7FHbOde0Ufl3S4F6y0Z2gN9s7tzsDQvtWUaXb9s16tHuohaDjdceOEvHHm8FjCKT0XSiDK7l67N7tKJTO1Tq0LQVHyFLMOKAKyiYn1xBlwkawB4HgLfqNAmLMcvn4RIHVQJB_9QnjJb4MDKDIZcAqM9yl7-d5p1IF98YnmF2ZeZrdmIFGHTOyRK9SPtwl1CyyvbVbZ1uKXJgQmwVFSHqMPFsrbqCE">
+<iframe id="flagship-vid" class="w-full h-full hidden" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div id="flagship-overlay" class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60 pointer-events-none"></div>
+<div id="flagship-badge" class="absolute top-4 left-4 bg-surface-tint text-surface-container-lowest px-3 py-1 font-label-md rounded shadow-lg pointer-events-none">FLAGSHIP</div>
+</div>
+<div class="p-stack-lg">
+<h3 id="flagship-title" class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">CEDARS (Coffee Exports Data System)</h3>
+<p id="flagship-desc" class="font-body-md text-on-surface-variant mb-stack-md">A simplified and dynamic user-friendly interactive system with Data Entry/Dashboard features that automates analysis and provides instant reporting. Utilizes Excel as frontend with powerful backend logic.</p>
+<div id="flagship-tags" class="flex flex-wrap gap-3 mb-4"></div>
+<a id="flagship-link" href="javascript:void(0)" class="inline-block font-label-md text-label-md text-surface-tint border border-surface-tint px-4 py-2 rounded hover:bg-surface-tint/10 transition-colors" data-url="">Learn More &rarr;</a>
+</div>
+</div>
+<!-- Bento Project List (clickable cards) -->
+<div class="flex flex-col gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="inventory" onclick="selectProject('inventory')">
+            <span class="material-symbols-outlined text-surface-tint">inventory</span>
+            <span class="font-body-md text-on-surface">Inventory Management</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="lms" onclick="selectProject('lms')">
+            <span class="material-symbols-outlined text-surface-tint">school</span>
+            <span class="font-body-md text-on-surface">Online LMS</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="ecommerce" onclick="selectProject('ecommerce')">
+            <span class="material-symbols-outlined text-surface-tint">shopping_cart</span>
+            <span class="font-body-md text-on-surface">E-Commerce Platforms</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="hospital" onclick="selectProject('hospital')">
+            <span class="material-symbols-outlined text-surface-tint">health_and_safety</span>
+            <span class="font-body-md text-on-surface">Hospital Management</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="pos" onclick="selectProject('pos')">
+            <span class="material-symbols-outlined text-surface-tint">point_of_sale</span>
+            <span class="font-body-md text-on-surface">Point of Sale Apps</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="hr" onclick="selectProject('hr')">
+            <span class="material-symbols-outlined text-surface-tint">groups</span>
+            <span class="font-body-md text-on-surface">Human Resource Info Systems</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="reporting" onclick="selectProject('reporting')">
+            <span class="material-symbols-outlined text-surface-tint">analytics</span>
+            <span class="font-body-md text-on-surface">Reporting &amp; Analytics Dashboards</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card" data-project="schoolfinance" onclick="selectProject('schoolfinance')">
+            <span class="material-symbols-outlined text-surface-tint">account_balance</span>
+            <span class="font-body-md text-on-surface">School Finance Mgmt Systems</span>
+        </div>
+        <div class="bg-surface-container-high p-4 rounded-xl border border-outline-variant flex gap-3 items-center cursor-pointer hover:border-surface-tint transition-all project-card sm:col-span-2 lg:col-span-1" data-project="excelvba" onclick="selectProject('excelvba')">
+            <span class="material-symbols-outlined text-surface-tint">table_view</span>
+            <span class="font-body-md text-on-surface">Excel-VBA Business Automation Systems</span>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Personal Identity Section -->
+<section class="py-section-gap bg-surface-container px-margin-mobile md:px-gutter">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="p-stack-lg bg-surface-container-lowest rounded-xl border border-outline-variant">
+<h3 class="font-display-lg text-headline-lg text-surface-tint mb-stack-md">System Core Attributes</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-lg italic border-l-2 border-surface-tint pl-4">
+                        "I naturally love programming (coding) where I get my motivation to witness how machines execute tasks according to commands and coded language scripts."
+                    </p>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-2">
+<p class="font-label-md text-code-sm uppercase text-on-surface-variant">Nationality</p>
+<p class="font-body-md text-on-surface">Papua New Guinean</p>
+</div>
+<div class="space-y-2">
+<p class="font-label-md text-code-sm uppercase text-on-surface-variant">Identity</p>
+<p class="font-body-md text-on-surface">Indigenous Tech Leader</p>
+</div>
+<div class="space-y-2">
+<p class="font-label-md text-code-sm uppercase text-on-surface-variant">Habits</p>
+<p class="font-body-md text-on-surface">Healthy Non-Smoker</p>
+</div>
+<div class="space-y-2">
+<p class="font-label-md text-code-sm uppercase text-on-surface-variant">Passion</p>
+<p class="font-body-md text-on-surface">20+ Yrs ICT Obsession</p>
+</div>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">The Declaration</h4>
+<p class="font-body-md text-on-surface-variant mb-stack-md">
+                        "If you can develop your own Database management system with interactive Dashboard for Data analysis via dynamic backend database connection with your ability to manipulate and integrate excel for data entry and collection... all you need is a formal qualification to claim that PhD level expertise."
+                    </p>
+<p class="font-label-md text-surface-tint">— PNG Unitech Data Analyst</p>
+</div>
+</div>
+</section>
+
+<!-- Referees Section -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<h2 class="font-display-lg text-headline-lg text-on-surface mb-stack-lg text-center">Verified Endorsements</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Referee 1 -->
+<div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
+<img class="w-full h-full object-cover" data-alt="A small professional avatar of Johnem Pusa, Program Manager. Professional headshot look, consistent with a corporate technical environment." src="resources/jp.jpg">
+</div>
+<h5 class="font-headline-md text-body-md text-on-surface">JOHNEM PUSA</h5>
+<p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Program Manager, CIC</p>
+<div class="text-on-surface-variant font-label-md text-xs space-y-1">
+<p class="flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 72244115</p>
+<p class="flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">mail</span> johnempusa@gmail.com</p>
+</div>
+</div>
+<!-- Referee 2 -->
+<div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
+<img class="w-full h-full object-cover" data-alt="A professional avatar of Marie Kiliawi, Senior Exports Officer. Clear, well-lit studio-style portrait suited for a professional portfolio." src="resources/marie3_a.jpg">
+</div>
+<h5 class="font-headline-md text-body-md text-on-surface">MARIE KILIAWI</h5>
+<p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Senior Exports Officer, CIC Ltd</p>
+<div class="text-on-surface-variant font-label-md text-xs space-y-1">
+<p class="flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 72798642</p>
+</div>
+</div>
+<!-- Referee 3 -->
+<div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
+<img class="w-full h-full object-cover" data-alt="A professional profile placeholder for Anis Tairo, Consultant &amp; Entrepreneur. Sleek design, tech-focused aesthetic." src="resources/anis_tairo.png">
+</div>
+<h5 class="font-headline-md text-body-md text-on-surface">ANIS TAIRO</h5>
+<p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Consultant &amp; Entrepreneur</p>
+<div class="text-on-surface-variant font-label-md text-xs space-y-1">
+<p class="flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 72001442</p>
+<p class="flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">mail</span> atairo@gmail.com</p>
+</div>
+</div>
+</div>
+<p class="text-center font-label-md text-on-surface-variant mt-stack-md italic">Additional references available upon request.</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-stack-lg mt-section-gap" id="contact">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-stack-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-code-sm text-code-sm text-on-surface-variant">© 2026 RIGOLO BAUGE ROBIN | Systems Architect</span>
+<p class="text-surface-tint font-label-md mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">phone</span> (675) 81233406 / 70968601 
+                    <span class="mx-2">|</span>
+<span class="material-symbols-outlined text-[18px]">mail</span> rigobauge@gmail.com
+                </p>
+</div>
+<div class="flex gap-stack-lg">
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-md text-label-md" href="#">Twitter</a>
+<a class="text-surface-tint font-bold font-label-md text-label-md underline decoration-surface-tint" href="mailto:rigobauge@gmail.com">Email Me</a>
+</div>
+</div>
+</footer>
+<!-- Animated Particles Interaction Layer -->
+<canvas class="fixed inset-0 pointer-events-none z-[1] opacity-30" id="particleCanvas" width="1280" height="4278"></canvas>
+<script>
+var projectData = {
+  cedars: {
+    title: 'CEDARS (Coffee Exports Data System)',
+    desc: 'A simplified and dynamic user-friendly interactive system with Data Entry/Dashboard features that automates analysis and provides instant reporting. Utilizes Excel as frontend with powerful backend logic.',
+    img: null,
+    vid: 'https://www.youtube.com/embed/X7VfUTntaoQ',
+    alt: 'CEDARS dashboard screenshot',
+    tags: ['Django', 'PostgreSQL', 'Excel Integration'],
+    url: null
+  },
+  inventory: {
+    title: 'NCADSP Inventory Management System',
+    desc: 'Enterprise-grade asset and inventory tracking platform managing procurement, depreciation, maintenance scheduling, and tendering. Built with Django, PostgreSQL, HTMX, and Tailwind CSS.',
+    img: 'img/inventory_screenshot_002.png',
+    alt: 'Inventory Management dashboard',
+    tags: ['Python/Django', 'PostgreSQL', 'HTMX', 'Tailwind CSS'],
+    url: 'project_inventory.html'
+  },
+  lms: {
+    title: 'PNG Curriculum OS',
+    desc: 'Enterprise AI-powered Learning Management System with 24 interconnected Django apps, 37 AI micro-services, RAG-based tutoring, and predictive risk engines.',
+    img: 'img/lms_screenshot.png',
+    alt: 'PNG Curriculum OS dashboard',
+    tags: ['Python/Django', 'React', 'OpenRouter', 'pgvector'],
+    url: 'project_lms.html'
+  },
+  ecommerce: {
+    title: 'E-Commerce Platforms',
+    desc: 'Full-featured e-commerce platform with integrated payment processing, shopping cart management, order tracking, and customer relationship management.',
+    img: null, alt: '', tags: [], url: null
+  },
+  hospital: {
+    title: 'Hospital Management',
+    desc: 'Comprehensive hospital management system handling patient records, appointment scheduling, billing, pharmacy inventory, and staff coordination.',
+    img: null, alt: '', tags: [], url: null
+  },
+  pos: {
+    title: 'Point of Sale Apps',
+    desc: 'Point of sale application with real-time transaction processing, inventory sync, receipt generation, and sales analytics.',
+    img: null, vid: 'https://www.youtube.com/embed/W6cPL_vW2n4', alt: '', tags: [], url: null
+  },
+  hr: {
+    title: 'Human Resource Info Systems',
+    desc: 'Human resource information system managing employee records, payroll, attendance tracking, leave management, and performance reviews.',
+    img: null, vid: 'https://www.youtube.com/embed/5J86p3XN0_c', alt: '', tags: [], url: null
+  },
+  reporting: {
+    title: 'Reporting & Analytics Dashboards',
+    desc: 'Interactive reporting and analytics dashboards with dynamic data visualization, custom report generation, and export capabilities.',
+    img: null, alt: '', tags: [], url: null
+  },
+  schoolfinance: {
+    title: 'School Finance Mgmt Systems',
+    desc: 'School finance management system handling fee collection, budgeting, expense tracking, financial reporting, and audit trails.',
+    img: null, alt: '', tags: [], url: null
+  },
+  excelvba: {
+    title: 'Excel-VBA Business Automation',
+    desc: 'Custom Excel-VBA business automation solutions streamlining data entry, validation, reporting, and workflow processes.',
+    img: null, alt: '', tags: [], url: null
+  }
+};
+
+function selectProject(key) {
+  var p = projectData[key];
+  if (!p) return;
+
+  document.getElementById('flagship-title').textContent = p.title;
+  document.getElementById('flagship-desc').textContent = p.desc;
+
+  var imgEl = document.getElementById('flagship-img');
+  var vidEl = document.getElementById('flagship-vid');
+  var overlayEl = document.getElementById('flagship-overlay');
+  
+  if (p.vid) {
+    vidEl.src = p.vid;
+    vidEl.classList.remove('hidden');
+    imgEl.style.display = 'none';
+    if (overlayEl) overlayEl.style.display = 'none';
+  } else if (p.img) {
+    vidEl.src = '';
+    vidEl.classList.add('hidden');
+    imgEl.src = p.img;
+    imgEl.alt = p.alt || '';
+    imgEl.style.display = 'block';
+    if (overlayEl) overlayEl.style.display = 'block';
+  } else {
+    vidEl.src = '';
+    vidEl.classList.add('hidden');
+    imgEl.style.display = 'none';
+    if (overlayEl) overlayEl.style.display = 'none';
+  }
+
+  var tagsEl = document.getElementById('flagship-tags');
+  tagsEl.innerHTML = '';
+  for (var i = 0; i < p.tags.length; i++) {
+    var tagSpan = document.createElement('span');
+    tagSpan.className = 'flex items-center gap-1 font-code-sm text-surface-tint';
+    tagSpan.innerHTML = '<span class="material-symbols-outlined text-[16px]">terminal</span> ' + p.tags[i];
+    tagsEl.appendChild(tagSpan);
+  }
+
+  var linkEl = document.getElementById('flagship-link');
+  if (p.url) {
+    linkEl.setAttribute('data-url', p.url);
+    linkEl.textContent = 'Learn More \u2192';
+    linkEl.className = 'inline-block font-label-md text-label-md text-surface-tint border border-surface-tint px-4 py-2 rounded hover:bg-surface-tint/10 transition-colors';
+    linkEl.style.pointerEvents = 'auto';
+    linkEl.style.cursor = 'pointer';
+  } else {
+    linkEl.setAttribute('data-url', '');
+    linkEl.textContent = 'Details Coming Soon';
+    linkEl.className = 'inline-block font-label-md text-label-md text-on-surface-variant border border-outline-variant px-4 py-2 rounded cursor-not-allowed';
+    linkEl.style.pointerEvents = 'none';
+    linkEl.style.cursor = 'default';
+  }
+
+  var cards = document.querySelectorAll('.project-card');
+  for (var j = 0; j < cards.length; j++) {
+    cards[j].classList.remove('border-surface-tint', 'ring-1', 'ring-surface-tint');
+  }
+  var activeCard = document.querySelector('.project-card[data-project="' + key + '"]');
+  if (activeCard) {
+    activeCard.classList.add('border-surface-tint', 'ring-1', 'ring-surface-tint');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  selectProject('cedars');
+  document.getElementById('flagship-link').addEventListener('click', function(e) {
+    var url = this.getAttribute('data-url');
+    if (url) {
+      e.preventDefault();
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      e.preventDefault();
+    }
+  });
+});
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
