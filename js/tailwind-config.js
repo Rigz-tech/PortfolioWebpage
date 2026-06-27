@@ -46,6 +46,7 @@ tailwind.config = {
             },
             "fontFamily": {
                 "body-md": ["Geist"],
+                "body-lg": ["Geist"],
                 "display-lg": ["Geist"],
                 "headline-lg": ["Geist"],
                 "label-md": ["JetBrains Mono"],
@@ -54,6 +55,7 @@ tailwind.config = {
             },
             "fontSize": {
                 "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
                 "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
                 "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
                 "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],

@@ -1,8 +1,20 @@
 <!DOCTYPE html><html class="dark" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>RIGOLO BAUGE ROBIN | Systems Architect</title>
+<title>RIGOLO BAUGE ROBIN | Systems Architect &amp; Software Engineer</title>
+<meta name="description" content="Portfolio of Rigolo Bauge Robin — Systems Architect, Senior Software Engineer, and Full Stack Developer with 20+ years of experience in enterprise systems, database architecture, and digital transformation.">
+<meta name="keywords" content="Systems Architect, Software Engineer, Full Stack Developer, Portfolio, Rigolo Bauge Robin, PNG, Papua New Guinea">
+<meta property="og:title" content="RIGOLO BAUGE ROBIN | Systems Architect">
+<meta property="og:description" content="Architecting Elegance out of Complexity — 20+ years of software engineering, systems architecture, and digital transformation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rigz-tech.github.io/PortfolioWebpage/">
+<meta property="og:image" content="https://rigz-tech.github.io/PortfolioWebpage/resources/rigzx7.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RIGOLO BAUGE ROBIN | Systems Architect">
+<meta name="twitter:description" content="Architecting Elegance out of Complexity — 20+ years of software engineering expertise.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +26,7 @@
 <body class="bg-background text-on-background font-body-md selection:bg-surface-tint selection:text-surface-container-lowest">
 <!-- Navigation Shell -->
 <header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant">
-<nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16">
+<nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16" aria-label="Main navigation">
 <span class="font-display-lg text-headline-md tracking-tighter text-on-surface">RIGOLO BAUGE ROBIN</span>
 <div class="hidden md:flex gap-stack-lg items-center">
 <a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-label-md text-label-md" href="#hero">Hero</a>
@@ -28,16 +40,29 @@
 <a href="#contact" class="bg-surface-tint text-surface-container-lowest px-stack-md py-2 rounded font-label-md text-label-md hover:opacity-90 transition-opacity">Resume</a>
 <a href="cv.html" class="border border-surface-tint text-surface-tint px-stack-md py-2 rounded font-label-md text-label-md hover:bg-surface-tint/10 transition-colors" target="_blank">View CV</a>
 </div>
-<button class="md:hidden text-surface-tint">
-<span class="material-symbols-outlined">menu</span>
+<button id="mobile-menu-btn" class="md:hidden text-surface-tint p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+<span class="material-symbols-outlined transition-transform duration-200">menu</span>
 </button>
 </nav>
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="md:hidden hidden flex-col gap-1 px-margin-mobile py-stack-md bg-background/95 backdrop-blur-md border-b border-outline-variant" aria-label="Mobile navigation">
+<a class="text-surface-tint border-l-2 border-surface-tint pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#hero">Hero</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#artwork">Artwork</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#education">Education</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors pl-3 py-3 font-label-md text-label-md min-h-[44px] flex items-center" href="#contact">Contact</a>
+<a href="#contact" class="bg-surface-tint text-surface-container-lowest px-stack-md py-3 rounded font-label-md text-label-md text-center mt-2">Resume</a>
+<a href="cv.html" class="border border-surface-tint text-surface-tint px-stack-md py-3 rounded font-label-md text-label-md text-center" target="_blank">View CV</a>
+</div>
 </header>
 <!-- Side Nav (Desktop Anchor) -->
-<aside class="fixed left-0 top-0 h-screen hidden lg:flex flex-col w-64 bg-surface-container-low border-r border-outline-variant z-40 pt-24 px-stack-md">
+<aside class="fixed left-0 top-0 h-screen hidden lg:flex flex-col w-64 bg-surface-container-low border-r border-outline-variant z-40 pt-24 px-stack-md" aria-label="Side navigation">
 <div class="flex flex-col items-center mb-stack-lg border-b border-outline-variant pb-stack-lg">
 <div class="w-20 h-20 bg-surface-variant rounded-full mb-stack-sm overflow-hidden border-2 border-surface-tint">
-<img class="w-full h-full object-cover" data-alt="A professional studio headshot of Rigolo Bauge Robin, a Systems Architect with a determined and experienced expression. He is set against a dark, tech-oriented backdrop with subtle cyan accent lighting. The overall mood is high-tech, professional, and reliable, reflecting a master of technical systems and software engineering." src="resources/rigzx7.png">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of Rigolo Bauge Robin, a Systems Architect with a determined and experienced expression. He is set against a dark, tech-oriented backdrop with subtle cyan accent lighting. The overall mood is high-tech, professional, and reliable, reflecting a master of technical systems and software engineering." src="resources/rigzx7.png" loading="lazy">
 </div>
 <h3 class="font-headline-md text-body-md text-surface-tint text-center">Systems Architect</h3>
 <p class="font-label-md text-code-sm text-on-surface-variant text-center">Technical Minimalism</p>
@@ -84,7 +109,7 @@
 <div class="md:col-span-8">
 <span class="font-label-md text-surface-tint mb-stack-sm block tracking-widest uppercase">Systems Architect &amp; Software Engineer</span>
 <h1 class="font-display-lg text-display-lg mb-stack-md text-on-surface max-w-3xl">
-                        Architecting <span class="text-surface-tint underline decoration-outline-variant" style="text-shadow: rgb(168, 85, 247) 0px 0px 10px, rgb(168, 85, 247) 0px 0px 20px;">Elegance</span> out of Complexity.
+                        Architecting <span class="text-surface-tint underline decoration-outline-variant glow-purple">Elegance</span> out of Complexity.
                     </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
                         Obsessed with a rare passion for ICT since 2002. From facilitating corporate training for organizations like PNG Power to developing sophisticated database systems, my journey is a 20-year obsession with command-line logic and architectural integrity.
@@ -97,7 +122,7 @@
 <div class="md:col-span-4 hidden md:block">
 <div class="aspect-square bg-surface-container border border-outline-variant p-2 relative">
 <div class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-surface-tint"></div>
-<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast professional portrait of Rigolo Bauge Robin, focusing on his face with sharp lighting. The background is a dimly lit server room with glowing blue and green network cables, creating a technical and authoritative environment. He looks directly at the camera with the confidence of a 20-year veteran in Systems Architecture." src="resources/rigzx7.png">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast professional portrait of Rigolo Bauge Robin, focusing on his face with sharp lighting. The background is a dimly lit server room with glowing blue and green network cables, creating a technical and authoritative environment. He looks directly at the camera with the confidence of a 20-year veteran in Systems Architecture." src="resources/rigzx7.png" loading="lazy">
 <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-surface-tint"></div>
 </div>
 </div>
@@ -510,7 +535,7 @@
 <!-- Referee 1 -->
 <div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
 <div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
-<img class="w-full h-full object-cover" data-alt="A small professional avatar of Johnem Pusa, Program Manager. Professional headshot look, consistent with a corporate technical environment." src="resources/jp.jpg">
+<img class="w-full h-full object-cover" data-alt="A small professional avatar of Johnem Pusa, Program Manager. Professional headshot look, consistent with a corporate technical environment." src="resources/jp.jpg" loading="lazy">
 </div>
 <h5 class="font-headline-md text-body-md text-on-surface">JOHNEM PUSA</h5>
 <p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Program Manager, CIC</p>
@@ -522,7 +547,7 @@
 <!-- Referee 2 -->
 <div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
 <div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
-<img class="w-full h-full object-cover" data-alt="A professional avatar of Marie Kiliawi, Senior Exports Officer. Clear, well-lit studio-style portrait suited for a professional portfolio." src="resources/marie3_a.jpg">
+<img class="w-full h-full object-cover" data-alt="A professional avatar of Marie Kiliawi, Senior Exports Officer. Clear, well-lit studio-style portrait suited for a professional portfolio." src="resources/marie3_a.jpg" loading="lazy">
 </div>
 <h5 class="font-headline-md text-body-md text-on-surface">MARIE KILIAWI</h5>
 <p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Senior Exports Officer, CIC Ltd</p>
@@ -533,7 +558,7 @@
 <!-- Referee 3 -->
 <div class="bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center flex flex-col items-center">
 <div class="w-16 h-16 rounded-full bg-surface-variant mb-stack-md flex items-center justify-center overflow-hidden border border-surface-tint">
-<img class="w-full h-full object-cover" data-alt="A professional profile placeholder for Anis Tairo, Consultant &amp; Entrepreneur. Sleek design, tech-focused aesthetic." src="resources/anis_tairo.png">
+<img class="w-full h-full object-cover" data-alt="A professional profile placeholder for Anis Tairo, Consultant &amp; Entrepreneur. Sleek design, tech-focused aesthetic." src="resources/anis_tairo.png" loading="lazy">
 </div>
 <h5 class="font-headline-md text-body-md text-on-surface">ANIS TAIRO</h5>
 <p class="font-label-md text-code-sm text-surface-tint mb-stack-md">Consultant &amp; Entrepreneur</p>
@@ -566,7 +591,7 @@
 </div>
 </footer>
 <!-- Animated Particles Interaction Layer -->
-<canvas class="fixed inset-0 pointer-events-none z-[1] opacity-30" id="particleCanvas" width="1280" height="4278"></canvas>
+<canvas class="fixed inset-0 pointer-events-none z-[1] opacity-30" id="particleCanvas" aria-hidden="true"></canvas>
 <script>
 var projectData = {
   cedars: {

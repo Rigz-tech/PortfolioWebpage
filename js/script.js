@@ -1,52 +1,131 @@
-// Micro-interaction: Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+/* ============================================
+   Mobile Navigation Toggle (Shared)
+   ============================================ */
+(function() {
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var menuPanel = document.getElementById('mobile-menu');
+  if (!menuBtn || !menuPanel) return;
+
+  function toggleMenu(forceClose) {
+    var isOpen = !menuPanel.classList.contains('hidden');
+    if (forceClose && !isOpen) return;
+    menuPanel.classList.toggle('hidden');
+    var nowOpen = !menuPanel.classList.contains('hidden');
+    menuBtn.setAttribute('aria-expanded', nowOpen);
+    var icon = menuBtn.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.textContent = nowOpen ? 'close' : 'menu';
+    }
+    document.body.style.overflow = nowOpen ? 'hidden' : '';
+  }
+
+  menuBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  var links = menuPanel.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      toggleMenu(true);
     });
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!menuPanel.classList.contains('hidden') &&
+        !menuPanel.contains(e.target) &&
+        !menuBtn.contains(e.target)) {
+      toggleMenu(true);
+    }
+  });
+})();
+
+/* ============================================
+   Smooth Scroll with Null Safety
+   ============================================ */
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    var target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
 
-// Background Atmosphere Particles
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
+/* ============================================
+   Populate real `alt` from `data-alt`
+   ============================================ */
+(function() {
+  var imgs = document.querySelectorAll('img[data-alt]');
+  for (var i = 0; i < imgs.length; i++) {
+    if (!imgs[i].alt) {
+      imgs[i].alt = imgs[i].getAttribute('data-alt');
+    }
+  }
+})();
 
-function initParticles() {
+/* ============================================
+   Background Atmosphere Particles
+   ============================================ */
+var canvas = document.getElementById('particleCanvas');
+if (canvas) {
+  var ctx = canvas.getContext('2d');
+  var particles = [];
+  var animId = null;
+  var isPageVisible = true;
+
+  function initParticles() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     particles = [];
-    for (let i = 0; i < 40; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: Math.random() * 2 + 1,
-            speedX: Math.random() * 0.5 - 0.25,
-            speedY: Math.random() * 0.5 - 0.25,
-            color: Math.random() > 0.5 ? '#00dbe7' : '#14d1ff'
-        });
+    for (var i = 0; i < 40; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2 + 1,
+        speedX: Math.random() * 0.5 - 0.25,
+        speedY: Math.random() * 0.5 - 0.25,
+        color: Math.random() > 0.5 ? '#00dbe7' : '#14d1ff'
+      });
     }
-}
+  }
 
-function animate() {
+  function animate() {
+    if (!isPageVisible) {
+      animId = requestAnimationFrame(animate);
+      return;
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.x += p.speedX;
-        p.y += p.speedY;
-        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fill();
-    });
-    requestAnimationFrame(animate);
-}
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.x += p.speedX;
+      p.y += p.speedY;
+      if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    animId = requestAnimationFrame(animate);
+  }
 
-window.addEventListener('resize', initParticles);
-initParticles();
-animate();
+  var resizeTimer = null;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initParticles, 150);
+  });
+
+  document.addEventListener('visibilitychange', function() {
+    isPageVisible = !document.hidden;
+  });
+
+  initParticles();
+  animate();
+}
 
 /* ============================================
    Infinite Artwork Carousel
