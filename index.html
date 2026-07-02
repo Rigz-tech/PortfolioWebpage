@@ -21,6 +21,12 @@
 <script src="js/tailwind-config.js"></script>
 <style>
   html { scroll-behavior: smooth; }
+  #hero-download-menu, #endorse-download-menu { transform-origin: top left; }
+  #hero-download-menu.show, #endorse-download-menu.show { display: block; animation: dropIn 0.2s ease-out; }
+  @keyframes dropIn {
+    from { opacity: 0; transform: scale(0.95) translateY(-4px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-surface-tint selection:text-surface-container-lowest">
@@ -117,6 +123,13 @@
 <div class="flex flex-wrap gap-stack-md">
 <a href="#projects" class="bg-surface-tint text-surface-container-lowest px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:scale-[0.98] transition-transform inline-block">Explore Work</a>
 <a href="#contact" class="border border-surface-tint text-surface-tint px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:bg-surface-tint/10 transition-colors inline-block">Contact Me</a>
+<div class="relative" id="hero-download-cv-wrap">
+<button id="hero-cv-download-btn" class="bg-surface-tint text-surface-container-lowest px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:scale-[0.98] transition-transform inline-flex items-center gap-2" onclick="var m=document.getElementById('hero-download-menu');var i=document.getElementById('hero-cv-dropdown-icon');if(m.style.display==='none'||!m.style.display){m.style.display='block';setTimeout(function(){m.classList.add('show')},10);i.style.transform='rotate(180deg)';i.style.transition='transform 0.25s ease'}else{m.classList.remove('show');m.style.display='none';i.style.transform='rotate(0deg)';i.style.transition='transform 0.25s ease'}"><span class="material-symbols-outlined text-[20px]">download</span> Download CV <span id="hero-cv-dropdown-icon" class="material-symbols-outlined text-[18px]" style="transition:transform 0.25s ease">expand_more</span></button>
+<div id="hero-download-menu" style="display:none;position:absolute;top:100%;left:0;margin-top:8px;width:256px;background:#060e20;border:1px solid #3a494b;border-radius:12px;box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);z-index:60;overflow:hidden;">
+<a href="resources/rigzx_cv_2026.pdf" target="_blank" style="display:flex;align-items:center;gap:12px;padding:16px;color:#dae2fd;text-decoration:none;border-bottom:1px solid rgba(58,73,75,0.3);"><span class="material-symbols-outlined" style="color:#00dbe7;">palette</span><div><p style="margin:0;font-size:14px;font-weight:600;color:#dae2fd;">Graphics CV</p><p style="margin:0;font-size:12px;color:#b9cacb;">Designed visual layout PDF</p></div></a>
+<a href="resources/Rigolo_Bauge_Robin_CV.pdf" target="_blank" style="display:flex;align-items:center;gap:12px;padding:16px;color:#dae2fd;text-decoration:none;"><span class="material-symbols-outlined" style="color:#00dbe7;">description</span><div><p style="margin:0;font-size:14px;font-weight:600;color:#dae2fd;">Plain CV</p><p style="margin:0;font-size:12px;color:#b9cacb;">Formal black &amp; white PDF</p></div></a>
+</div>
+</div>
 </div>
 </div>
 <div class="md:col-span-4 hidden md:block">
@@ -568,6 +581,27 @@
 </div>
 </div>
 </div>
+
+<!-- Download CV Card -->
+<div class="mt-stack-lg bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl text-center">
+  <div class="flex items-center justify-center gap-2 mb-stack-sm">
+    <span class="material-symbols-outlined text-surface-tint text-[28px]">description</span>
+    <h3 class="font-headline-md text-headline-md text-on-surface">Download My CV</h3>
+  </div>
+  <p class="font-body-md text-on-surface-variant mb-stack-md">Ready for interview &amp; screening? Download my CV now.</p>
+  <div class="inline-flex relative" id="endorse-download-cv-wrap">
+    <button id="endorse-cv-download-btn" class="bg-surface-tint text-surface-container-lowest px-stack-lg py-3 rounded-lg font-headline-md text-body-md hover:scale-[0.98] transition-transform inline-flex items-center gap-2" onclick="var m=document.getElementById('endorse-download-menu');var i=document.getElementById('endorse-cv-dropdown-icon');if(m.style.display==='none'||!m.style.display){m.style.display='block';setTimeout(function(){m.classList.add('show')},10);i.style.transform='rotate(180deg)';i.style.transition='transform 0.25s ease'}else{m.classList.remove('show');m.style.display='none';i.style.transform='rotate(0deg)';i.style.transition='transform 0.25s ease'}">
+      <span class="material-symbols-outlined text-[20px]">download</span> Download CV
+      <span id="endorse-cv-dropdown-icon" class="material-symbols-outlined text-[18px]" style="transition:transform 0.25s ease">expand_more</span>
+    </button>
+    <div id="endorse-download-menu" style="display:none;position:absolute;top:100%;left:0;margin-top:8px;width:256px;background:#060e20;border:1px solid #3a494b;border-radius:12px;box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);z-index:60;overflow:hidden;">
+      <a href="resources/rigzx_cv_2026.pdf" target="_blank" style="display:flex;align-items:center;gap:12px;padding:16px;color:#dae2fd;text-decoration:none;border-bottom:1px solid rgba(58,73,75,0.3);"><span class="material-symbols-outlined" style="color:#00dbe7;">palette</span><div><p style="margin:0;font-size:14px;font-weight:600;color:#dae2fd;">Graphics CV</p><p style="margin:0;font-size:12px;color:#b9cacb;">Designed visual layout PDF</p></div></a>
+      <a href="resources/Rigolo_Bauge_Robin_CV.pdf" target="_blank" style="display:flex;align-items:center;gap:12px;padding:16px;color:#dae2fd;text-decoration:none;"><span class="material-symbols-outlined" style="color:#00dbe7;">description</span><div><p style="margin:0;font-size:14px;font-weight:600;color:#dae2fd;">Plain CV</p><p style="margin:0;font-size:12px;color:#b9cacb;">Formal black &amp; white PDF</p></div></a>
+    </div>
+  </div>
+  <p class="font-label-md text-on-surface-variant mt-stack-md italic">PDF format — click to download instantly</p>
+</div>
+
 <p class="text-center font-label-md text-on-surface-variant mt-stack-md italic">Additional references available upon request.</p>
 </section>
 </main>
@@ -732,6 +766,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+  /* CV dropdowns: click outside to close */
+  (function() {
+    var dropdowns = [
+      { wrap: 'hero-download-cv-wrap', menu: 'hero-download-menu', icon: 'hero-cv-dropdown-icon' },
+      { wrap: 'endorse-download-cv-wrap', menu: 'endorse-download-menu', icon: 'endorse-cv-dropdown-icon' }
+    ];
+    document.addEventListener('click', function(e) {
+      for (var d = 0; d < dropdowns.length; d++) {
+        var wrap = document.getElementById(dropdowns[d].wrap);
+        var menu = document.getElementById(dropdowns[d].menu);
+        var icon = document.getElementById(dropdowns[d].icon);
+        if (wrap && menu && !wrap.contains(e.target) && (menu.style.display === 'block' || menu.classList.contains('show'))) {
+          menu.classList.remove('show');
+          menu.style.display = 'none';
+          if (icon) { icon.style.transform = 'rotate(0deg)'; }
+        }
+      }
+    });
+  })();
 </script>
 <script src="js/script.js"></script>
 
